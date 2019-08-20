@@ -59,12 +59,18 @@ nav {
 }
 
 nav a {
-  color: #2c3e50;
+  color: #434655;
   margin: 0 10px;
   text-decoration: none;
+  transition: 0.5s ease all;
+}
+
+nav a:hover {
+  text-decoration: none;
+  font-size: 1.3em;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2b70dc;
 }
 </style>
