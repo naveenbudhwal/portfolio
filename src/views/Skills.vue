@@ -1,11 +1,32 @@
 <template>
-  <div class="container">
+  <div class="container page">
     <div class="heading">Skills</div>
+    <hr />
+    <skill-card  
+    v-for="skill in skills"
+    v-bind:key="skill.id"
+    v-bind:skillHeading="skill.title"
+    v-bind:skillBody="skill.body"
+    ></skill-card>
   </div>
 </template>
 
 <script>
-export default {};
+import SkillCard from "../components/SkillCard.vue";
+
+export default {
+  name: "Skills",
+  components: { SkillCard },
+  data() {
+    return {
+      skills: [
+      { id: 1, title: 'Web Development', body: ["VueJS", "NodeJS", "MongoDB", "ExpressJS"]},
+      { id: 2, title: 'Designing', body: ["Abobe Illustrator", "Adobe Photoshop", "Adobe Premiere Pro"]},
+      { id: 3, title: 'Music Production', body: ["FL Studio"]}
+    ]
+    };
+  }
+};
 </script>
 
 <style scoped>
