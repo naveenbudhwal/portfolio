@@ -43,8 +43,13 @@
         </ul>
       </div>
     </nav>
-
-    <router-view />
+    <transition
+      name="router-anim"
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated fadeOut"
+    >
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -52,10 +57,14 @@
 /* #app {
   font-family: "Raleway", sans-serif;
 } */
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css";
+
 nav {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
 nav a {
@@ -72,5 +81,9 @@ nav a:hover {
 
 nav a.router-link-exact-active {
   color: #2b70dc;
+}
+
+.page {
+  position: fixed;
 }
 </style>
