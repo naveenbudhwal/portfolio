@@ -13,7 +13,7 @@
     </div>-->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent pt-4">
-      <router-link to="/">LOGO</router-link>
+      <router-link to="/"><img class="logo" src="../public/Logo1.png" alt="Logo"></router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -83,7 +83,12 @@ nav a.router-link-exact-active {
   color: #2b70dc;
 }
 
-.page {
-  position: fixed;
+.logo {
+  width: 70px;
+  height: auto;
 }
+
+/* .page {
+  position: fixed;
+} */
 </style>
