@@ -1,6 +1,7 @@
 <template>
   <div class="root">
     <div class="header">{{skillHeading}}</div>
+    <hr>
     <div class="body">
       <ul>
         <li v-for="skill in skillBody">{{skill}}</li>
@@ -31,10 +32,12 @@ export default {
 
 .header {
   font-weight: 500;
+  text-align: center;
 }
 
 li {
   list-style: none;
+  text-align: start;
 }
 
 </style>
