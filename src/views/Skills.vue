@@ -1,14 +1,17 @@
 <template>
-  <div class="container page">
+  <div class="root">
     <div class="heading">Skills</div>
     <hr />
-    <skill-card  
-    v-for="skill in skills"
-    v-bind:key="skill.id"
-    v-bind:skillHeading="skill.title"
-    v-bind:skillBody="skill.body"
-    ></skill-card>
+    <div class="container page">
+      <skill-card  
+      v-for="skill in skills"
+      v-bind:key="skill.id"
+      v-bind:skillHeading="skill.title"
+      v-bind:skillBody="skill.body"
+      ></skill-card>
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -30,10 +33,21 @@ export default {
 </script>
 
 <style scoped>
+
+.container {
+  display: flex;
+}
+
 .heading {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
   font-weight: 500;
   color: #434655;
+  margin-left: 20%;
 }
+
+hr {
+  width: 80%;
+}
+
 </style>
