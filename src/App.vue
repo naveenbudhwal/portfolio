@@ -88,6 +88,16 @@ nav a.router-link-exact-active {
   height: auto;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #000;
+}
+
+::selection {
+  color: #fff;
+  background: #000;
+}
+
 /* .page {
   position: fixed;
 } */

@@ -1,15 +1,21 @@
 <template>
-  <div class="container">
-    <div class="photo">
-      <img class="image" src="../assets/about_me_pic.jpg" alt="My Photo">
-    </div>
-    <div class="intro mx-5">
-      <div class="intro-heading pb-4">Hey<span>,</span> I<span>'</span>m Naveen<span>.</span></div>
-      <div class="intro-body">
-        I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not coding, tweeting or pushing pixels, you'll find me cooking, gardening or working out in the park.
+  <div class="root2">
+    <div class="container">
+      <div class="photo">
+        <img class="image" src="../assets/about_me_pic.jpg" alt="My Photo">
+      </div>
+      <div class="intro mx-5">
+        <div class="intro-heading pb-4">Hey<span>,</span> I<span>'</span>m Naveen<span>.</span></div>
+        <div class="intro-body">
+          I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not coding, tweeting or pushing pixels, you'll find me cooking, gardening or working out in the park.
+        </div>
       </div>
     </div>
+    <div class="footer">
+
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -47,6 +53,16 @@ export default {
 
 span {
   color: #2b70dc;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #000;
+}
+
+::selection {
+  color: #fff;
+  background: #000;
 }
 
 @media only screen and (max-width: 768px) {

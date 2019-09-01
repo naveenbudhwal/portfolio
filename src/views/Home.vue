@@ -34,6 +34,16 @@ export default {
   color: #434655;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #000;
+}
+
+::selection {
+  color: #fff;
+  background: #000;
+}
+
 span {
   color: #2b70dc;
 }
