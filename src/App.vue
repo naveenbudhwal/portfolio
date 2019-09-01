@@ -13,7 +13,7 @@
     </div>-->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent pt-4">
-      <router-link to="/"><img class="logo" src="../public/Logo1.png" alt="Logo"></router-link>
+      <router-link to="/"><img class="logo" src="../public/Logo01.png" alt="Logo"></router-link>
       <button
         class="navbar-toggler"
         type="button"
