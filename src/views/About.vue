@@ -12,7 +12,10 @@
       </div>
     </div>
     <div class="footer">
-
+      <a href="mailto:naveenbudhwal@gmail.com" class="effect-underline"><i class="far fa-envelope pr-3"></i> Email @</a>
+      <a href="#" class="effect-underline"><i class="fab fa-instagram pr-3"></i> Follow me on Instagram</a>
+      <a href="#" class="effect-underline"><i class="fab fa-linkedin pr-3"></i> Check my LinkedIn profile</a>
+      <a href="#" class="effect-underline"><i class="fab fa-github pr-3"></i> Link to Github profile</a>
     </div>
   </div>
   
@@ -53,6 +56,31 @@ export default {
 
 span {
   color: #2b70dc;
+}
+
+i {
+  color: #2b70dc;
+  font-size: 1.5em;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+  padding: 2% 15%;
+  background: #191a1d;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ababab;
+  margin: 0.5em 0;
+}
+
+.footer a:hover {
+  color: #fff;
 }
 
 ::-moz-selection { /* Code for Firefox */
