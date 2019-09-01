@@ -25,7 +25,8 @@ export default {
       skills: [
       { id: 1, title: 'Web Development', body: ["VueJS", "NodeJS", "MongoDB", "ExpressJS"]},
       { id: 2, title: 'Designing', body: ["Abobe Illustrator", "Adobe Photoshop", "Adobe Premiere Pro"]},
-      { id: 3, title: 'Music Production', body: ["FL Studio"]}
+      { id: 3, title: 'Music Production', body: ["FL Studio"]},
+      {id: 4, title: 'Programming', body: ['C / C++', 'Python']}
     ]
     };
   }
@@ -35,7 +36,7 @@ export default {
 <style scoped>
 
 .container {
-  display: flex;
+  display: flex;  
 }
 
 .heading {
@@ -48,6 +49,12 @@ export default {
 
 hr {
   width: 80%;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 </style>
