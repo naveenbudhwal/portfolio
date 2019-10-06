@@ -5,7 +5,7 @@
       <span>,</span> I'm Naveen
       <span>:)</span>
     </div>
-    <div class="sub-intro">Web Developer and coder</div>
+    <div class="sub-intro">Web Developer <span>|</span> Coder</div>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .intro {
-  margin-top: 70px;
+  margin-top: 100px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -47,4 +47,5 @@ export default {
 span {
   color: #2b70dc;
 }
+
 </style>

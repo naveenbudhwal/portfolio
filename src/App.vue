@@ -35,7 +35,7 @@
             <router-link to="/skills">Skills</router-link>
           </li>
           <li class="nav-item mx-2 hvr-underline-from-center">
-            <router-link to="/gallery">Gallery</router-link>
+            <router-link to="/projects">Projects</router-link>
           </li>
           <li class="nav-item mx-2 hvr-underline-from-center">
             <router-link to="/about">About</router-link>
@@ -104,7 +104,8 @@ nav {
 }
 
 nav a {
-  color: #434655;
+  /* color: #434655; */
+  color: #000;
   margin: 0 10px;
   text-decoration: none;
   /* transition: 0.5s ease all; */
