@@ -2,34 +2,34 @@
   <div class="root">
     <div class="header">
       <div class="heading">Skills</div>
-      <hr />
+      <!-- <hr /> -->
     </div>
     <div class="container page">
-      <skill-card  
+      <card  
       v-for="skill in skills"
       :key="skill.id"
-      :skillHeading="skill.title"
+      :Heading="skill.title"
       :skillBody="skill.body"
-      :skillPicture="skill.picture"
-      ></skill-card>
+      :Picture="skill.picture"
+      ></card>
     </div>
   </div>
   
 </template>
 
 <script>
-import SkillCard from "../components/SkillCard.vue";
+import Card from "../components/Card.vue";
 
 export default {
   name: "Skills",
-  components: { SkillCard },
+  components: { Card },
   data() {
     return {
       skills: [
-      { id: 1, title: 'Web Development', body: ["VueJS", "NodeJS", "MongoDB", "ExpressJS"], picture: require('@/assets/web_dev.png')},
-      { id: 2, title: 'Designing', body: ["Abobe Illustrator", "Adobe Photoshop", "Adobe Premiere Pro", "Adobe Lightroom"], picture: require('@/assets/design.png')},
-      { id: 3, title: 'Music Production', body: ["FL Studio"], picture: require('@/assets/music_prod.png')},
-      {id: 4, title: 'Programming', body: ['C / C++', 'Python'], picture: require('@/assets/programming.png')}
+      { id: 1, title: 'WEB DEVELOPMENT', body: ["Vue JS", "Node JS", "MongoDB", "Express JS"], picture: require('@/assets/web_dev.png')},
+      { id: 2, title: 'DESIGNING', body: ["Abobe Illustrator", "Adobe Photoshop", "Adobe Premiere Pro", "Adobe Lightroom"], picture: require('@/assets/design.png')},
+      { id: 3, title: 'MUSIC PRODUCTION', body: ["FL Studio"], picture: require('@/assets/music_prod.png')},
+      {id: 4, title: 'PROGRAMMING', body: ['C / C++', 'Python'], picture: require('@/assets/programming.png')}
     ]
     };
   }
@@ -50,16 +50,17 @@ export default {
 .heading {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   margin-left: 20%;
   padding-top: 12%;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 }
 
-hr {
-  width: 80%;
-}
+/* hr {
+  width: 60%;
+  background: #000;
+} */
 
 .container, .page {
   margin-top: -70px;
@@ -68,6 +69,7 @@ hr {
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
+    align-items: center;
   }
   .header {
     margin-top: -250px;
