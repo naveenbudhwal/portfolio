@@ -50,18 +50,18 @@
 
 <script>
 
-var cursor = true;
-var speed = 500;
+// var cursor = true;
+// var speed = 500;
 
-setInterval(() => {
-   if(cursor) {
-     document.querySelector('.cursor').style.opacity = 0;
-     cursor = false;
-   } else {
-     document.querySelector('.cursor').style.opacity = 1;
-     cursor = true;
-   }
-}, speed);
+// setInterval(() => {
+//    if(cursor) {
+//      document.querySelector('.cursor').style.opacity = 0;
+//      cursor = false;
+//    } else {
+//      document.querySelector('.cursor').style.opacity = 1;
+//      cursor = true;
+//    }
+// }, speed);
 
 export default {
   name: "home"
