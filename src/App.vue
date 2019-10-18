@@ -126,13 +126,13 @@ nav a.router-link-exact-active {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: rgba(0,0,0,0.1);
 }
 
 ::selection {
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: rgba(0,0,0,0.1);
 }
 
 /* .page {
