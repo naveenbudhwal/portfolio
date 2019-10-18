@@ -5,7 +5,7 @@
         <img class="image" src="../assets/about_me_pic.jpg" alt="My Photo">
       </div>
       <div class="intro">
-        <div class="intro-heading">Hey<span>,</span> I<span>'</span>m Naveen<span>.</span></div>
+        <div class="intro-heading">Hey<span class="color">,</span> I<span class="color">'</span>m Naveen<span class="color">.</span></div>
         <hr class="material-hr">
         <div class="intro-body pt-3">
           I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not coding, building websites, you'll find me designing vector art, making music, editing photos.
@@ -34,8 +34,11 @@
 
     <div class="music">
       <p>Who doesn't like music...</p>
-      <p>I'm an edm lover and know a little bit of music production</p>
+      <p>I'm an  <span class="standout">EDM</span>  lover and know a little bit of music production</p>
       <p>Check if you and i enjoy the same type</p>
+      <a href="https://open.spotify.com/user/naveenbudhwal?si=MI1L3rhZQ4iK6qMCCeWScw">
+        <span>Spotify</span>
+      </a>
     </div>
 
     <div class="footer">
@@ -139,8 +142,14 @@ export default {
   font-size: 1.2em;
 }
 
-span {
+.color {
   color: #2b70dc;
+}
+
+.standout {
+  color: #2A6461;
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 i {
@@ -151,7 +160,7 @@ i {
 .material-hr {
   width: 100px;
   border: 0;
-  height: 5px;
+  height: 7px;
   background: #2b70dc;
   border-radius: 7px;
   margin-left: 0;
@@ -192,6 +201,44 @@ hr {
   justify-content: center;
   margin-top: -170px;
   margin-bottom: 5%;
+}
+
+.music {
+  /* background: rgba(0,0,0,0.5); */
+  background: #E6F4F1;
+  margin: 10% 10%;
+  padding: 5% 10%;
+  color: #389B97;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.music a {
+  text-decoration: none;
+  background: #1DB954;
+  color: #fff;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.music a span {
+  color: #fff;
+  font-size: 0.9em;
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.music a:hover {
+  background: #248C88;
+  font-size: 1.2em;
 }
 
 .footer {
