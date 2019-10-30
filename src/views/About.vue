@@ -8,7 +8,10 @@
         <div class="intro-heading">Hey<span class="color">,</span> I<span class="color">'</span>m Naveen<span class="color">.</span></div>
         <hr class="material-hr">
         <div class="intro-body pt-3">
-          I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not coding, building websites, you'll find me designing vector art, making music, editing photos.
+          <p>I enjoy making simple, beautiful designs for complex problems.</p>
+          <p>Tech Enthusiast.</p>
+          <p>EDM Lover.</p>
+          <p>Console Gamer.</p>
         </div>
       </div>
     </div>
@@ -47,28 +50,33 @@
         <router-link to="/"><img src="../assets/Logo01.png" alt="Brand-Logo"></router-link>   
       </div>
 
+      <div class="qoute">
+        <p>Do what you love</p>
+        <p>& Love what you do</p>
+      </div>
+
       <div class="links">
-        <a href="mailto:naveenbudhwal@gmail.com">
+        <a href="mailto:naveenbudhwal@gmail.com" target="_blank">
           <span class="icon">
             <i class="far fa-envelope"></i>
           </span>
         </a>
-        <a href="https://www.instagram.com/naveenbudhwal">
+        <a href="https://www.instagram.com/naveenbudhwal" target="_blank">
           <span class="icon">
             <i class="fab fa-instagram"></i>
           </span>
         </a>
-        <a href="https://www.linkedin.com/in/naveenbudhwal">
+        <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank">
           <span class="icon">
             <i class="fab fa-linkedin-in"></i>
           </span>
         </a>
-        <a href="https://www.github.com/naveenbudhwal">
+        <a href="https://www.github.com/naveenbudhwal" target="_blank">
           <span class="icon">
             <i class="fab fa-github"></i>
           </span>
         </a>
-        <a href="https://www.twitter.com/naveenbudhwal">
+        <a href="https://www.twitter.com/naveenbudhwal" target="_blank">
           <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
@@ -76,7 +84,7 @@
       </div>
 
       <div class="copyright mt-5">
-        <p><i class="far fa-copyright"></i> 2019 Naveen Budhwal. All rights reserved</p>
+        <p><i class="far fa-copyright"></i> {{year}} Naveen Budhwal. All rights reserved</p>
       </div>
     </div>
   </div>
@@ -86,16 +94,26 @@
 <script>
 import HorizontalCard from '../components/HorizontalCard.vue';
 
+const vectorArt = 'Recently I discovered my love for Adobe Illustrator. It is really fun to create and play with vector objects.';
+
+const running = "When I'm not on my computer, I go for solid run on the field. It clears up your mind and good for your health."
+
+const gaming = 'I have been playing console games since my childhood. Big fan of the GTA series and Call of Duty lineup. Waiting for the release of the next playstation.';
+
+let d = new Date()
+let y = d.getFullYear();
+
+
 export default {
   name: 'About',
   components: { HorizontalCard },
   data() {
     return {
+      year: y,
       hobbies: [
-        { id: 1, title: 'Photography', body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem magnam quisquam quasi saepe eligendi numquam maxime pariatur accusamus voluptate.', picture: require('@/assets/photography.png')},
-        { id: 2, title: 'Vector Art', body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem magnam quisquam quasi saepe eligendi numquam maxime pariatur accusamus voluptate.', picture: require('@/assets/design.png')},
-        { id: 3, title: 'Running', body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem magnam quisquam quasi saepe eligendi numquam maxime pariatur accusamus voluptate.', picture: require('@/assets/running.png')},
-        { id: 4, title: 'Gaming', body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem magnam quisquam quasi saepe eligendi numquam maxime pariatur accusamus voluptate.', picture: require('@/assets/gaming.png')}
+        { id: 1, title: 'Vector Art', body: vectorArt, picture: require('@/assets/design.png')},
+        { id: 2, title: 'Running', body: running, picture: require('@/assets/running.png')},
+        { id: 3, title: 'Gaming', body: gaming, picture: require('@/assets/gaming.png')}
       ]
     }
   }
@@ -139,6 +157,7 @@ export default {
 
 .intro-body {
   color: #535353;
+  font-weight: 500;
   font-size: 1.2em;
 }
 
@@ -251,6 +270,14 @@ hr {
   font-family: "Montserrat", sans-serif;
 }
 
+.qoute {
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
 .footer a {
   text-decoration: none;
   /* margin: 0.5em 0; */
@@ -305,13 +332,13 @@ hr {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #000;
-  background: rgba(0,0,0,0.3);
+  color: #fff;
+  background: rgba(0,0,0,0.8);
 }
 
 ::selection {
-  color: #000;
-  background: rgba(0,0,0,0.3);
+  color: #fff;
+  background: rgba(0,0,0,0.8);
 }
 
 @media only screen and (max-width: 768px) {
