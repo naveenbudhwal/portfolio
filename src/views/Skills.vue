@@ -68,11 +68,11 @@ export default {
 .heading {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   margin-left: 20%;
-  padding-top: 12%;
-  padding-bottom: 5rem;
+  padding-top: 10%;
+  padding-bottom: 6rem;
 }
 
 /* hr {
