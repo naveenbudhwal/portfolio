@@ -31,6 +31,7 @@ export default {
   margin: 0 15%;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  max-width: 850px;
 }
 
 .col-md-4 {
@@ -46,6 +47,7 @@ export default {
 .card-title {
   color: #2b70dc;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 576px) {
@@ -54,6 +56,17 @@ export default {
   }
   .card {
     margin: 0 10%;
+  }
+  .card-img {
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-img {
+    width: 180px;
+    height: 180px;
   }
 }
 

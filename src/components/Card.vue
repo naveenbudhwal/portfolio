@@ -67,6 +67,10 @@ li {
   .root {
     width: 70%;
   }
+  .picture img {
+    width: 7em;
+    height: auto;
+  }
 }
 
 </style>
