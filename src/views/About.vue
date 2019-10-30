@@ -56,27 +56,27 @@
       </div>
 
       <div class="links">
-        <a href="mailto:naveenbudhwal@gmail.com" target="_blank">
+        <a href="mailto:naveenbudhwal@gmail.com" target="_blank" rel="noopener">
           <span class="icon">
             <i class="far fa-envelope"></i>
           </span>
         </a>
-        <a href="https://www.instagram.com/naveenbudhwal" target="_blank">
+        <a href="https://www.instagram.com/naveenbudhwal" target="_blank" rel="noopener">
           <span class="icon">
             <i class="fab fa-instagram"></i>
           </span>
         </a>
-        <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank">
+        <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank" rel="noopener">
           <span class="icon">
             <i class="fab fa-linkedin-in"></i>
           </span>
         </a>
-        <a href="https://www.github.com/naveenbudhwal" target="_blank">
+        <a href="https://www.github.com/naveenbudhwal" target="_blank" rel="noopener">
           <span class="icon">
             <i class="fab fa-github"></i>
           </span>
         </a>
-        <a href="https://www.twitter.com/naveenbudhwal" target="_blank">
+        <a href="https://www.twitter.com/naveenbudhwal" target="_blank" rel="noopener">
           <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
