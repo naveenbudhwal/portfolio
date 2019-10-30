@@ -1,48 +1,43 @@
 <template>
   <div class="root">
-    <div class="main">
-      <div class="first-half">
-        <div class="intro">
-          Hi <span class="color">,</span> 
-          <p>I<span class="color">'</span>m <span class="bold">Naveen</span>  <span class="color cursor">|</span></p>
+    <div class="wrapper">
+      <div class="main">
+        <div class="first-half">
+          <div class="intro">
+            <p>Hi<span class="color">,</span> I<span class="color">'</span>m </p>
+            <p><span class="bold">Naveen</span><span class="color bold">.</span></p>
+          </div>
+          <hr class="material-hr">
+          <div class="sub-intro">
+            <p>Web Developer</p>
+            <p>Coder</p>
+          </div>
         </div>
-        <div class="sub-intro">Web Developer <span class="color bold">|</span>  Coder
-        </div>
-      </div>
-      <div class="second-half">
-        <div class="avatar">
-          <img src="../assets/portrait.png" alt="My photo">
+        <div class="second-half">
+          <div class="avatar">
+            <img src="../assets/portrait.png" alt="My photo">
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="footer">
-      <a href="mailto:naveenbudhwal@gmail.com">
-          <span class="icon">
-            <i class="far fa-envelope"></i>
-          </span>
+    <div class="social-media-bar">
+      <a href="mailto:naveenbudhwal@gmail.com" target="_blank">
+          <i class="far fa-envelope"></i>
       </a>
-      <a href="#">
-        <span class="icon">
-          <i class="fab fa-instagram"></i>
-        </span>
+      <a href="https://www.instagram.com/naveenbudhwal" target="_blank">
+        <i class="fab fa-instagram"></i>
       </a>
-      <a href="#">
-        <span class="icon">
-          <i class="fab fa-linkedin-in"></i>
-        </span>
+      <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="#">
-        <span class="icon">
-          <i class="fab fa-github"></i>
-        </span>
+      <a href="https://www.github.com/naveenbudhwal" target="_blank">
+        <i class="fab fa-github"></i>
       </a>
-      <a href="#">
-        <span class="icon">
-          <i class="fab fa-twitter"></i>
-        </span>
+      <a href="https://www.twitter.com/naveenbudhwal" target="_blank">
+        <i class="fab fa-twitter"></i>
       </a>
-    </div> -->
+    </div>
 
   </div>
   
@@ -70,9 +65,14 @@ export default {
 
 <style scoped>
 
+/* .wrapper {
+  min-height: 100%;
+} */
+
 .main {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 50px;
 }
 
 .intro {
@@ -115,12 +115,81 @@ export default {
 .sub-intro {
   text-align: start;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 2rem;
-  color: #434655;
+  color: #76A5FF;
   padding-left: 20%;
   /* margin-top: 50px; */
 }
+
+.material-hr {
+  width: 100px;
+  border: 0;
+  height: 7px;
+  background: #2b70dc;
+  border-radius: 7px;
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+
+i {
+  color: #2b70dc;
+}
+
+.social-media-bar {
+  position: relative;
+  height: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.social-media-bar a {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.social-media-bar a i {
+  /* padding: 16px; */
+  padding: 10px;
+  border: 2px solid #AED6FF;
+  border-radius: 100%;
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
+}
+
+.social-media-bar a i:hover {
+  color: #fff;
+  background: #2b70dc;  
+  border: 2px solid #AED6FF;
+}
+
+/* .fa-twitter {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.fa-linkedin-in {
+  background: #2867B2;
+  color: #fff;
+}
+
+.fa-envelope {
+  background: #DB4437;
+  color: #fff;
+}
+
+.fa-instagram {
+  background: #C13584;
+  color: #fff;
+}
+
+.fa-github {
+  background: #000;
+  color: #fff;
+} */
 
 ::-moz-selection { /* Code for Firefox */
   color: #fff;
@@ -136,11 +205,15 @@ export default {
   color: #2b70dc;
 }
 
+.color2 {
+  color: #76A5FF;
+}
+
 .bold {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   .main {
     flex-direction: column;
   }
@@ -152,32 +225,32 @@ export default {
   }
   .avatar {
     animation: none;
+    text-align: center;
+    padding-right: 0;
   }
-}
-
-.footer {
-  /* margin-top: 50px;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-around; */
-  position: fixed;
-	bottom: 45px;
-	left: 0;
-	right: 0;
-	height: 0;
-	/* center all inline content */
-	text-align: center;
-}
-
-.footer a {
-  font-size: 1.5em;
-  margin: 0 50px;
-  /* make the block inline */
-	display: inline-block;
-	/* reset container's center alignment */
-	text-align: left;
+  .avatar img {
+    width: 20rem;
+    height: auto;
+  }
+  .intro {
+    padding-left: 0;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .sub-intro {
+    padding-left: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    /* display: flex;
+    justify-content: center; */
+  }
+  .material-hr {
+    margin: 0 auto;
+  }
+  .social-media-bar a {
+    margin: 0 10px;
+  }
 }
 
 </style>
