@@ -1,6 +1,6 @@
 <template>
   <div class="root2">
-    <div class="container heading">
+    <div class="heading">
       <div class="photo">
         <img class="image" src="../assets/about_me_pic.jpg" alt="My Photo">
       </div>
@@ -134,9 +134,7 @@ export default {
 .heading {
   display: flex;
   padding: 4% 0;
-}
-
-.container {
+  justify-content: center;
   font-family: "Montserrat", sans-serif;
   margin-top: 5%;
 }
@@ -342,7 +340,7 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
+  .heading{
     flex-direction: column;
   }
   .image {
@@ -384,6 +382,12 @@ hr {
 @media only screen and (max-width: 1200px) {
   .hobbies {
     margin-top: -120px;
+  }
+  .heading {
+    justify-content: center;
+  }
+  .heading .intro { 
+    margin: 0 3%;
   }
 }
 

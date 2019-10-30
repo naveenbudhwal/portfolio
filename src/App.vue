@@ -28,16 +28,16 @@
 
       <div class="collapse navbar-collapse pr-4" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-2 hvr-underline-from-center">
+          <li class="nav-item mx-2">
             <router-link to="/">Home</router-link>
           </li>
-          <li class="nav-item mx-2 hvr-underline-from-center">
+          <li class="nav-item mx-2">
             <router-link to="/skills">Skills</router-link>
           </li>
-          <li class="nav-item mx-2 hvr-underline-from-center">
+          <li class="nav-item mx-2">
             <router-link to="/projects">Projects</router-link>
           </li>
-          <li class="nav-item mx-2 hvr-underline-from-center">
+          <li class="nav-item mx-2">
             <router-link to="/about">About</router-link>
           </li>
         </ul>
@@ -54,42 +54,6 @@
 </template>
 
 <style>
-
-/* Nav-Link underline animation */
-
-.hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-}
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: #2b70dc;
-  height: 4px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
-}
-
 /* #app {
   font-family: "Raleway", sans-serif;
 } */
