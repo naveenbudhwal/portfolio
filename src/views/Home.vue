@@ -117,7 +117,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 2rem;
-  color: #76A5FF;
+  color: #2b70dc;
   padding-left: 20%;
   /* margin-top: 50px; */
 }
