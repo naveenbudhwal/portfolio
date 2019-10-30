@@ -13,6 +13,24 @@
       :Picture="skill.picture"
       ></card>
     </div>
+
+    <div class="social-media-bar">
+      <a href="mailto:naveenbudhwal@gmail.com" target="_blank">
+          <i class="far fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/naveenbudhwal" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.github.com/naveenbudhwal" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.twitter.com/naveenbudhwal" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
   </div>
   
 </template>
@@ -66,7 +84,42 @@ export default {
   margin-top: -70px;
 }
 
-@media only screen and (max-width: 768px) {
+i {
+  color: #2b70dc;
+}
+
+.social-media-bar {
+  position: relative;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social-media-bar a {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.social-media-bar a i {
+  /* padding: 16px; */
+  padding: 10px;
+  border: 2px solid #AED6FF;
+  border-radius: 100%;
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
+}
+
+.social-media-bar a i:hover {
+  color: #fff;
+  background: #2b70dc;  
+  border: 2px solid #AED6FF;
+}
+
+@media only screen and (max-width: 1200px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -85,6 +138,15 @@ export default {
   }
   .heading {
     padding-top: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .social-media-bar a {
+    margin: 0 10px;
+  }
+  .social-media-bar {
+    margin-bottom: 20px;
   }
 }
 
