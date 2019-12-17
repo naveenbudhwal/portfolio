@@ -207,7 +207,7 @@ hr {
 
 .info p {
   text-align: center;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.5);
   font-size: 1.3em;
 }
 
@@ -229,18 +229,21 @@ hr {
   font-weight: 500;
   font-size: 1.1em;
   text-align: center;
+  border-radius: 20px;
 }
 
 .music a {
   text-decoration: none;
   background: #1DB954;
   color: #fff;
-  padding: 10px;
-  border-radius: 30px;
   display: flex;
   width: 200px;
   margin: 0 auto;
   margin-top: 40px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  padding: 10px 20px;
+  border-radius: 24px;
+  
   transition: all 0.2s ease-in-out;
 }
 
@@ -255,7 +258,7 @@ hr {
 
 .music a:hover {
   background: #248C88;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
 }
 
 .footer {
@@ -327,16 +330,6 @@ hr {
 .copyright p i {
   color: #434655;
   font-size: 18px;
-}
-
-::-moz-selection { /* Code for Firefox */
-  color: #fff;
-  background: rgba(0,0,0,0.8);
-}
-
-::selection {
-  color: #fff;
-  background: rgba(0,0,0,0.8);
 }
 
 @media only screen and (max-width: 768px) {
