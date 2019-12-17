@@ -4,7 +4,7 @@
       <img :src="Picture" alt="Skill Illustration">
     </div>
     <div class="header">{{Heading}}</div>
-    <hr>
+    <hr class="material-hr">
     <div class="body">
       <ul>
         <li v-for="skill in skillBody">{{skill}}</li>
@@ -28,8 +28,11 @@ export default {
 .root {
   width: 50%;
   font-family: "Montserrat", sans-serif;
-  border: 0.5px solid #dadada;
-  border-radius: 10px;
+  box-shadow: 
+    0 20px 30px  rgba(0, 0, 0, 0.1);
+    /* 0 5px 10px rgba(0, 0, 0, 0.1); */
+  /* border: 0.5px solid #dadada; */
+  border-radius: 17px;
   padding: 10px;
   /* box-shadow: 2px 2px 5px #dadada; */
   margin: 20px;
@@ -38,12 +41,14 @@ export default {
 
 .picture {
   display: flex;
-}
-
-.picture img{
   width: 9em;
   height: auto;
   margin: 0 auto;
+}
+
+.picture img{
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -63,11 +68,19 @@ li {
   color: #434655;
 }
 
+.material-hr {
+  background: #E9EFFF;
+  height: 3px;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .root {
     width: 70%;
   }
-  .picture img {
+  .picture {
     width: 7em;
     height: auto;
   }

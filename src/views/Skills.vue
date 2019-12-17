@@ -69,8 +69,9 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
   font-weight: 600;
-  color: #fff;
-  margin-left: 20%;
+  color: #F6F8FF;
+  /* margin-left: 20%; */
+  text-align: center;
   padding-top: 10%;
   padding-bottom: 6rem;
 }
