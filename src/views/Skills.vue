@@ -95,6 +95,7 @@ i {
   margin-top: 30px;
   margin-bottom: 10px;
   text-align: center;
+  z-index: -1;
 }
 
 .social-media-bar a {

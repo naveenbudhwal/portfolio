@@ -253,4 +253,10 @@ i {
   }
 }
 
+@media only screen and (max-width: 350px) {
+  .social-media-bar a {
+    margin: 0 5px;
+  }
+}
+
 </style>
