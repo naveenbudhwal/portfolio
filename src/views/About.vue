@@ -82,8 +82,10 @@
           </span>
         </a>
       </div>
-
-      <div class="copyright mt-5">
+      <div class="credits">
+        <div class="icon-credits">Icons from <a href="https://www.fontawesome.com" class="color" target="_blank" rel="noopener">Font Awesome <i class="fab fa-font-awesome-flag"></i></a></div>
+      </div>
+      <div class="copyright">
         <p><i class="far fa-copyright"></i> {{year}} Naveen Budhwal. All rights reserved</p>
       </div>
     </div>
@@ -322,6 +324,17 @@ hr {
   height: auto;
 }
 
+.icon-credits{
+  text-align: center;
+  padding: 40px 0 20px 0;   
+  color: #434655;
+}
+
+.icon-credits i {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
 .copyright {
   text-align: center;
   color: #434655;
@@ -330,6 +343,10 @@ hr {
 .copyright p i {
   color: #434655;
   font-size: 18px;
+}
+
+.color {
+  color: #2b70dc;
 }
 
 @media only screen and (max-width: 768px) {
