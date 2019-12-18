@@ -31,7 +31,7 @@ export default {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   padding: 10px;
   border-radius: 15px;
-  max-width: 900px;
+  max-width: 800px; 
   margin: 10px 0;
 } 
 
@@ -65,7 +65,7 @@ export default {
   margin: 0;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .horizontal-card-title, .horizontal-card-text {
     text-align: center;
   }
@@ -78,20 +78,13 @@ export default {
   }
   .card-img {
     width: 180px;
-    height: auto;
+    height: 180px;
   }
   .horizontal-card-title {
     margin: 10px 0;
   }
   .horizontal-card-text {
     margin-bottom: 20px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .card-img {
-    width: 180px;
-    height: 180px;
   }
 }
 
