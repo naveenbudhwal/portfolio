@@ -92,9 +92,16 @@ export default {
 
 
 <style>
-/* #app {
-  font-family: "Raleway", sans-serif;
-} */
+
+#app {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  /* font-family: "Raleway", sans-serif; */
+  margin: 0;
+  padding: 0;
+}
 
 ul {
   padding: 0;
@@ -116,9 +123,14 @@ ul {
 }
 
 .logo {
-  margin-left: 20px;
-  width: 70px;
-  height: auto;
+  margin-left: 15px;
+  width: 65px;
+  height: 65px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .nav-links {
@@ -150,7 +162,7 @@ nav a.router-link-exact-active {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .nav-links {
     width: 50%;
   }
@@ -160,11 +172,17 @@ nav a.router-link-exact-active {
   
   .navbar {
     position: relative;
+    width: 80%;
+    margin: auto;
+  }
+
+  .logo {
+    margin-left: -15px;
   }
 
   .hamburger {
     display: block;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     /* position: absolute;
     right: 30px;
     top: 7.5vh;
@@ -183,11 +201,18 @@ nav a.router-link-exact-active {
   .nav-links {
     position: fixed;  
     background: #2b70dc;
+    /* background-image: url('./assets/hamburger_menu.jpg'); */
+    background-image:
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(43, 112, 220, 1)),
+      url('./assets/hamburger_menu1.jpg');
+    background-size: cover;
+    /* opacity: 0.3; */
     right: 0px;
     height: 100vh;
     width: 100%;
     margin: 0;
     bottom: 0;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     clip-path: circle(100px at 90% -18%);
@@ -197,21 +222,28 @@ nav a.router-link-exact-active {
     z-index: 2;
   }
 
+  .nav-links li {
+    padding: 30px 0;
+  }
+
   .nav-links a {
     color: #fff;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   nav a.router-link-exact-active {
-    color: #AED6FF;
+    background: #fff;
+    color: #2b70dc;
+    padding: 10px 15px;
+    border-radius: 10px;
   }
 
   .nav-links a:hover {
-    color: #AED6FF;
+    background: #fff;
+    color: #2b70dc;
+    padding: 10px;
+    border-radius: 10px;
   }
-
-  /* .nav-links li {
-    opacity: 0;
-  } */
 
   .nav-links.open {
     clip-path: circle(1392px at 90% -18%);

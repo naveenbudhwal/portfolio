@@ -44,20 +44,6 @@
 </template>
 
 <script>
-
-// var cursor = true;
-// var speed = 500;
-
-// setInterval(() => {
-//    if(cursor) {
-//      document.querySelector('.cursor').style.opacity = 0;
-//      cursor = false;
-//    } else {
-//      document.querySelector('.cursor').style.opacity = 1;
-//      cursor = true;
-//    }
-// }, speed);
-
 export default {
   name: "home"
 };
@@ -65,14 +51,10 @@ export default {
 
 <style scoped>
 
-/* .wrapper {
-  min-height: 100%;
-} */
-
 .main {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .intro {
@@ -85,9 +67,12 @@ export default {
   padding-left: 20%; 
 }
 
+.intro p {
+  margin: 30px 0;
+}
+
 .avatar {
   padding-right: 100px;
-	/* transform: translatey(0px); */
 	animation: float 5s ease-in-out infinite;
 }
 
@@ -119,7 +104,7 @@ export default {
   font-size: 2rem;
   color: #2b70dc;
   padding-left: 20%;
-  /* margin-top: 50px; */
+  margin-bottom: 0px;
 }
 
 .material-hr {
@@ -144,19 +129,15 @@ i {
 }
 
 .social-media-bar a {
-  font-size: 20px;
   text-align: center;
   margin: 0 20px;
 }
 
 .social-media-bar a i {
-  /* padding: 16px; */
   padding: 10px;
   border: 2px solid #AED6FF;
   border-radius: 100%;
   font-size: 22px;
-  width: 48px;
-  height: 48px;
   transition: all 0.3s ease;
 }
 
@@ -165,31 +146,6 @@ i {
   background: #2b70dc;  
   border: 2px solid #AED6FF;
 }
-
-/* .fa-twitter {
-  background: #1DA1F2;
-  color: #fff;
-}
-
-.fa-linkedin-in {
-  background: #2867B2;
-  color: #fff;
-}
-
-.fa-envelope {
-  background: #DB4437;
-  color: #fff;
-}
-
-.fa-instagram {
-  background: #C13584;
-  color: #fff;
-}
-
-.fa-github {
-  background: #000;
-  color: #fff;
-} */
 
 ::-moz-selection { /* Code for Firefox */
   color: #fff;
@@ -242,8 +198,6 @@ i {
     text-align: center;
     font-size: 1.8rem;
     margin-top: 20px;
-    /* display: flex;
-    justify-content: center; */
   }
   .material-hr {
     margin: 0 auto;

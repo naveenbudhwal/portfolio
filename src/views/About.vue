@@ -46,7 +46,7 @@
 
     <div class="footer">
 
-      <div class="logo">
+      <div class="logo1">
         <router-link to="/"><img src="../assets/Logo01.png" alt="Brand-Logo"></router-link>   
       </div>
 
@@ -159,6 +159,7 @@ export default {
   color: #535353;
   font-weight: 500;
   font-size: 1.2em;
+  /* padding-top: 30px; */
 }
 
 .color {
@@ -199,18 +200,22 @@ i {
 hr {
   width: 50%;
   background: rgba(255,255,255,0.1);
-  height: 2px;
+  height: 3px;
+  border: none;
 }
 
 .info h1 {
   color: rgba(255,255,255,0.9);
   text-align: center;
+  font-weight: 500;
+  font-size: 2em;
 }
 
 .info p {
   text-align: center;
   color: rgba(255,255,255,0.5);
-  font-size: 1.3em;
+  font-size: 1.2em;
+  padding: 0 50px;
 }
 
 .hobbies {
@@ -267,7 +272,7 @@ hr {
   /* display: flex; */
   width: 100%;
   margin: 0;
-  padding: 2% 15%;
+  /* padding: 2% 15%; */
   background: #191a1d;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -279,6 +284,7 @@ hr {
   font-size: 1.3em;
   font-weight: 400;
   margin-bottom: 40px;
+  margin-top: -20px;
 }
 
 .footer a {
@@ -293,8 +299,9 @@ hr {
 
 .footer .links {
   display: flex;
+  width: 60%;
   justify-content: space-around;
-  margin: 0 100px;
+  margin: 0 auto;
 }
 
 .links a i {
@@ -302,8 +309,8 @@ hr {
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 100%;
   font-size: 22px;
-  width: 48px;
-  height: 48px;
+  width: 34px;
+  height: 34px;
   color: rgba(255,255,255,1);
   transition: all 0.2s ease-in-out;
   display: flex;
@@ -311,7 +318,7 @@ hr {
   align-items: center;
 }
 
-.logo {
+.logo1 {
   /* flex: 1;
   margin: auto; */
   width: fit-content;
@@ -319,14 +326,14 @@ hr {
   padding: 10px 0;
 }
 
-.logo img {
+.logo1 img {
   width: 200px;
   height: auto;
 }
 
-.icon-credits{
+.icon-credits {
   text-align: center;
-  padding: 40px 0 20px 0;   
+  padding: 40px 0 10px 0;   
   color: #434655;
 }
 
@@ -338,6 +345,7 @@ hr {
 .copyright {
   text-align: center;
   color: #434655;
+  padding-bottom: 10px;
 }
 
 .copyright p i {
@@ -386,12 +394,16 @@ hr {
 @media only screen and (max-width: 576px) {
   .footer .links a {
     margin: 0 7px;
-  } 
+  }
+  .links a i {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .hobbies {
-    margin-top: -120px;
+    margin-top: -150px;
   }
   .heading {
     justify-content: center;

@@ -57,6 +57,8 @@ export default {
   color: #2b70dc;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 1.3em;
+  letter-spacing: 1.2px;
 }
 
 .horizontal-card-text {

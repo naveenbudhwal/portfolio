@@ -57,7 +57,9 @@ export default {
 <style scoped>
 
 .container {
-  display: flex;  
+  display: flex;
+  width: 80%;
+  margin: auto;  
 }
 
 .header {
@@ -95,7 +97,6 @@ i {
   margin-top: 30px;
   margin-bottom: 10px;
   text-align: center;
-  z-index: -1;
 }
 
 .social-media-bar a {
@@ -110,8 +111,8 @@ i {
   border: 2px solid #AED6FF;
   border-radius: 100%;
   font-size: 22px;
-  width: 48px;
-  height: 48px;
+  /* width: 48px; */
+  /* height: 48px; */
   transition: all 0.3s ease;
 }
 

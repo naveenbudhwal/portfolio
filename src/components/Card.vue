@@ -7,7 +7,7 @@
     <hr class="material-hr">
     <div class="body">
       <ul>
-        <li v-for="skill in skillBody">{{skill}}</li>
+        <li class="skills" v-for="skill in skillBody">{{skill}}</li>
       </ul>
     </div>
   </div>
@@ -55,7 +55,20 @@ export default {
   font-weight: 500;
   text-align: center;
   color: #2b70dc;
+  letter-spacing: 1.2px;
+  font-size: 1.1em;
+  margin: 10px 0;
 }
+
+.skills {
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.body {
+  margin-bottom: 10px;
+}
+
 
 ul {
   padding: 0;

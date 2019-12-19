@@ -14,6 +14,7 @@ export default {
 <style>
 
 .projects {
+  font-weight: 400;
   margin-left: 50%;
   transform: translateX(-50%);  
   width: 80%;
