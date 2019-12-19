@@ -207,6 +207,13 @@ i {
   }
 }
 
+@media only screen and (max-width: 760px) {
+  .avatar img {
+    width: 20rem;
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   .social-media-bar a {
     margin: 0 5px;

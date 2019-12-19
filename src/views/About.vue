@@ -215,7 +215,7 @@ hr {
   text-align: center;
   color: rgba(255,255,255,0.5);
   font-size: 1.2em;
-  padding: 0 50px;
+  padding: 0 40px;
 }
 
 .hobbies {
@@ -362,6 +362,8 @@ hr {
     flex-direction: column;
   }
   .image {
+    width: 220px;
+    height: auto;
     margin-bottom: 8%;
   }
   .photo, .intro {
@@ -379,6 +381,9 @@ hr {
   .info {
     padding-top: 50px;
     padding-bottom: 150px;
+  }
+  .info p {
+    padding: 0;
   }
   .hobbies {
     margin-top: -130px;
