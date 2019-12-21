@@ -4,10 +4,15 @@
       <div class="main">
         <div class="first-half">
           <div class="intro">
-            <p>Hi<span class="color">,</span> I<span class="color">'</span>m </p>
-            <p><span class="bold">Naveen</span><span class="color bold">.</span></p>
+            <p>
+              Hi<span class="color">,</span> I<span class="color">'</span>m
+            </p>
+            <p>
+              <span class="bold">Naveen</span>
+              <span class="color bold">.</span>
+            </p>
           </div>
-          <hr class="material-hr">
+          <hr class="material-hr" />
           <div class="sub-intro">
             <p>Web Developer</p>
             <p>Coder</p>
@@ -15,7 +20,7 @@
         </div>
         <div class="second-half">
           <div class="avatar">
-            <img src="../assets/portrait.png" alt="My photo">
+            <img src="../assets/portrait.png" alt="My photo" />
           </div>
         </div>
       </div>
@@ -23,7 +28,7 @@
 
     <div class="social-media-bar">
       <a href="mailto:naveenbudhwal@gmail.com" target="_blank" rel="noopener">
-          <i class="far fa-envelope"></i>
+        <i class="far fa-envelope"></i>
       </a>
       <a href="https://www.instagram.com/naveenbudhwal" target="_blank" rel="noopener">
         <i class="fab fa-instagram"></i>
@@ -38,9 +43,7 @@
         <i class="fab fa-twitter"></i>
       </a>
     </div>
-
   </div>
-  
 </template>
 
 <script>
@@ -50,11 +53,17 @@ export default {
 </script>
 
 <style scoped>
-
 .main {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.first-half {
+  width: 40%;
+}
+.second-half {
+  width: 40%;
 }
 
 .intro {
@@ -64,7 +73,7 @@ export default {
   font-size: 5rem;
   color: #434655;
   padding-top: 5%;
-  padding-left: 20%; 
+  padding-left: 20%;
 }
 
 .intro p {
@@ -73,19 +82,19 @@ export default {
 
 .avatar {
   padding-right: 100px;
-	animation: float 5s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-30px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 .avatar img {
@@ -94,7 +103,7 @@ export default {
 }
 
 .cursor {
- font-size: 0.9em;   
+  font-size: 0.9em;
 }
 
 .sub-intro {
@@ -114,7 +123,7 @@ export default {
   background: #2b70dc;
   border-radius: 7px;
   margin-left: 20%;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 i {
@@ -135,7 +144,7 @@ i {
 
 .social-media-bar a i {
   padding: 10px;
-  border: 2px solid #AED6FF;
+  border: 2px solid #aed6ff;
   border-radius: 100%;
   font-size: 22px;
   transition: all 0.3s ease;
@@ -143,11 +152,12 @@ i {
 
 .social-media-bar a i:hover {
   color: #fff;
-  background: #2b70dc;  
-  border: 2px solid #AED6FF;
+  background: #2b70dc;
+  border: 2px solid #aed6ff;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #fff;
   background: #000;
 }
@@ -162,7 +172,7 @@ i {
 }
 
 .color2 {
-  color: #76A5FF;
+  color: #76a5ff;
 }
 
 .bold {
@@ -175,9 +185,11 @@ i {
   }
   .first-half {
     order: 2;
+    width: 100%;
   }
   .second-half {
     order: 1;
+    width: 100%;
   }
   .avatar {
     animation: none;
@@ -209,8 +221,17 @@ i {
 
 @media only screen and (max-width: 760px) {
   .avatar img {
-    width: 20rem;
+    width: 17rem;
     height: auto;
+  }
+  .intro {
+    font-size: 3.5rem;
+  }
+  .sub-intro {
+    font-size: 1.6rem;
+  }
+  .social-media-bar a {
+    margin: 0 10px;
   }
 }
 
@@ -219,5 +240,4 @@ i {
     margin: 0 5px;
   }
 }
-
 </style>

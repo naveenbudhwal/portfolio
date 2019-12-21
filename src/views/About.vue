@@ -2,11 +2,13 @@
   <div class="root2">
     <div class="heading">
       <div class="photo">
-        <img class="image" src="../assets/about_me_pic.jpg" alt="My Photo">
+        <img class="image" src="../assets/about_me_pic.jpg" alt="My Photo" />
       </div>
       <div class="intro">
-        <div class="intro-heading">Hey<span class="color">,</span> I<span class="color">'</span>m Naveen<span class="color">.</span></div>
-        <hr class="material-hr">
+        <div class="intro-heading">
+          Hey<span class="color">,</span> I<span class="color">'</span>m Naveen<span class="color">.</span>
+        </div>
+        <hr class="material-hr" />
         <div class="intro-body pt-3">
           <p>I enjoy making simple, beautiful designs for complex problems.</p>
           <p>Tech Enthusiast.</p>
@@ -19,7 +21,7 @@
     <div class="info">
       <div class="spacer">
         <h1>Hobbies</h1>
-        <hr>
+        <hr />
         <p>I like to spend my free time by doing things that i love to do. Here are the list of hobbies that i have</p>
       </div>
     </div>
@@ -31,13 +33,15 @@
         :Heading="hobby.title"
         :Body="hobby.body"
         :Picture="hobby.picture"
-      >
-      </horizontal-card>
+      ></horizontal-card>
     </div>
 
     <div class="music">
       <p>Who doesn't like music...</p>
-      <p>I'm an  <span class="standout">EDM</span>  lover and know a little bit of music production</p>
+      <p>
+        I'm an
+        <span class="standout">EDM</span> lover and know a little bit of music production
+      </p>
       <p>Check if you and i enjoy the same type</p>
       <a href="https://open.spotify.com/user/naveenbudhwal?si=MI1L3rhZQ4iK6qMCCeWScw">
         <span>Spotify</span>
@@ -45,9 +49,10 @@
     </div>
 
     <div class="footer">
-
       <div class="logo1">
-        <router-link to="/"><img src="../assets/Logo01.png" alt="Brand-Logo"></router-link>   
+        <router-link to="/">
+          <img src="../assets/Logo01.png" alt="Brand-Logo" />
+        </router-link>
       </div>
 
       <div class="qoute">
@@ -83,10 +88,24 @@
         </a>
       </div>
       <div class="credits">
-        <div class="icon-credits">Icons from <a href="https://www.fontawesome.com" class="color" target="_blank" rel="noopener">Font Awesome <i class="fab fa-font-awesome-flag"></i></a></div>
+        <div class="icon-credits">
+          Icons from
+          <a
+            href="https://www.fontawesome.com"
+            class="color"
+            target="_blank"
+            rel="noopener"
+          >
+            Font Awesome
+            <i class="fab fa-font-awesome-flag"></i>
+          </a>
+        </div>
       </div>
       <div class="copyright">
-        <p><i class="far fa-copyright"></i> {{year}} Naveen Budhwal. All rights reserved</p>
+        <p>
+          <i class="far fa-copyright"></i>
+          {{year}} Naveen Budhwal. All rights reserved
+        </p>
       </div>
     </div>
   </div>
@@ -94,36 +113,52 @@
 
 
 <script>
-import HorizontalCard from '../components/HorizontalCard.vue';
+import HorizontalCard from "../components/HorizontalCard.vue";
 
-const vectorArt = 'Recently I discovered my love for Adobe Illustrator. It is really fun to create and play with vector objects.';
+const vectorArt =
+  "Recently I discovered my love for Adobe Illustrator. It is really fun to create and play with vector objects.";
 
-const running = "When I'm not on my computer, I go for solid run on the field. It clears up your mind and good for your health."
+const running =
+  "When I'm not on my computer, I go for solid run on the field. It clears up your mind and good for your health.";
 
-const gaming = 'I have been playing console games since my childhood. Big fan of the GTA series and Call of Duty lineup. Waiting for the release of the next playstation.';
+const gaming =
+  "I have been playing console games since my childhood. Big fan of the GTA series and Call of Duty lineup. Waiting for the release of the next playstation.";
 
-let d = new Date()
+let d = new Date();
 let y = d.getFullYear();
 
-
 export default {
-  name: 'About',
+  name: "About",
   components: { HorizontalCard },
   data() {
     return {
       year: y,
       hobbies: [
-        { id: 1, title: 'Vector Art', body: vectorArt, picture: require('@/assets/design.png')},
-        { id: 2, title: 'Running', body: running, picture: require('@/assets/running.png')},
-        { id: 3, title: 'Gaming', body: gaming, picture: require('@/assets/gaming.png')}
+        {
+          id: 1,
+          title: "Vector Art",
+          body: vectorArt,
+          picture: require("@/assets/design.png")
+        },
+        {
+          id: 2,
+          title: "Running",
+          body: running,
+          picture: require("@/assets/running.png")
+        },
+        {
+          id: 3,
+          title: "Gaming",
+          body: gaming,
+          picture: require("@/assets/gaming.png")
+        }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-
 .root2 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
@@ -167,7 +202,7 @@ export default {
 }
 
 .standout {
-  color: #2A6461;
+  color: #2a6461;
   font-weight: 600;
   font-size: 1.2em;
 }
@@ -193,19 +228,19 @@ i {
 .info {
   margin: 5% 0;
   padding-top: 5%;
-  padding-bottom: 10%; 
+  padding-bottom: 10%;
   background: #191a1d;
 }
 
 hr {
   width: 50%;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   height: 3px;
   border: none;
 }
 
 .info h1 {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-weight: 500;
   font-size: 2em;
@@ -213,7 +248,7 @@ hr {
 
 .info p {
   text-align: center;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 1.2em;
   padding: 0 40px;
 }
@@ -229,10 +264,10 @@ hr {
 
 .music {
   /* background: rgba(0,0,0,0.5); */
-  background: #E6F4F1;
+  background: #e6f4f1;
   margin: 10% 10%;
   padding: 5% 10%;
-  color: #389B97;
+  color: #389b97;
   font-weight: 500;
   font-size: 1.1em;
   text-align: center;
@@ -241,16 +276,17 @@ hr {
 
 .music a {
   text-decoration: none;
-  background: #1DB954;
+  background: #1db954;
   color: #fff;
   display: flex;
   width: 200px;
   margin: 0 auto;
   margin-top: 40px;
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   padding: 10px 20px;
   border-radius: 24px;
-  
+
   transition: all 0.2s ease-in-out;
 }
 
@@ -264,7 +300,7 @@ hr {
 }
 
 .music a:hover {
-  background: #248C88;
+  background: #248c88;
   /* font-size: 1.2em; */
 }
 
@@ -280,7 +316,7 @@ hr {
 
 .qoute {
   text-align: center;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 1.3em;
   font-weight: 400;
   margin-bottom: 40px;
@@ -306,12 +342,12 @@ hr {
 
 .links a i {
   padding: 10px;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 100%;
   font-size: 22px;
   width: 34px;
   height: 34px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
@@ -333,7 +369,7 @@ hr {
 
 .icon-credits {
   text-align: center;
-  padding: 40px 0 10px 0;   
+  padding: 40px 0 10px 0;
   color: #434655;
 }
 
@@ -358,15 +394,16 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
-  .heading{
+  .heading {
     flex-direction: column;
   }
   .image {
-    width: 220px;
+    width: 250px;
     height: auto;
     margin-bottom: 8%;
   }
-  .photo, .intro {
+  .photo,
+  .intro {
     margin: 0 auto;
   }
   .intro-heading {
@@ -397,12 +434,38 @@ hr {
 }
 
 @media only screen and (max-width: 576px) {
+  .intro {
+    padding: 0 10px;
+  }
+  .intro-heading {
+    font-size: 2.2em;
+  }
+  .intro-body {
+    font-size: 1.17em;
+  }
+  .image {
+    width: 200px;
+    height: auto;
+  }
   .footer .links a {
     margin: 0 7px;
   }
   .links a i {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .footer .links a {
+    margin: 0 3px;
+  }
+  .links a i {
+    width: 25px;
+    height: 25px;
+  }
+  .music a {
+    width: 150px;
   }
 }
 
@@ -413,9 +476,8 @@ hr {
   .heading {
     justify-content: center;
   }
-  .heading .intro { 
+  .heading .intro {
     margin: 0 3%;
   }
 }
-
 </style>

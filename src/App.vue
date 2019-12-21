@@ -30,15 +30,17 @@
           </li>
         </ul>
       </div>
-    </nav> -->
+    </nav>-->
 
     <nav class="navbar">
       <div class="logo">
-        <router-link to="/"><img class="logo" src="../public/Logo01.png" alt="Logo"></router-link>
+        <router-link to="/">
+          <img class="logo" src="../public/Logo01.png" alt="Logo" />
+        </router-link>
       </div>
       <ul class="nav-links">
         <li class="nav-item">
-            <router-link to="/">Home</router-link>
+          <router-link to="/">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/skills">Skills</router-link>
@@ -52,12 +54,10 @@
       </ul>
 
       <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line one"></div>
         <div class="line"></div>
       </div>
     </nav>
-
 
     <transition
       name="router-anim"
@@ -71,30 +71,32 @@
 
 
 <script>
-
-window.addEventListener('load',function(){
-    document.querySelector(".hamburger").addEventListener("click", () => {
-      const navLinks = document.querySelector('.nav-links')
-      const links = document.querySelectorAll('.nav-links li')
-      navLinks.classList.toggle('open');
-      links.forEach((link) => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('open');
-        })
-      })
+window.addEventListener("load", function() {
+  var hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open1");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
+    navLinks.classList.toggle("open");
+    // line.classList.toggle("open1");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        hamburger.classList.remove("open1");
+      });
     });
+  });
 });
 
 export default {
-  name: 'Home'
-}
+  name: "Home"
+};
 </script>
 
 
 <style>
-
 #app {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -143,7 +145,6 @@ ul {
 .nav-links a {
   text-decoration: none;
   color: rgb(73, 80, 87);
-  
 }
 
 .nav-links a:hover {
@@ -169,7 +170,6 @@ nav a.router-link-exact-active {
 }
 
 @media only screen and (max-width: 768px) {
-  
   .navbar {
     position: relative;
     width: 80%;
@@ -177,34 +177,51 @@ nav a.router-link-exact-active {
   }
 
   .logo {
-    margin-left: -15px;
+    margin-left: -8px;
   }
 
   .hamburger {
     display: block;
     /* margin-right: 30px; */
-    /* position: absolute;
-    right: 30px;
+    position: absolute;
+    right: 0;
     top: 7.5vh;
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
     cursor: pointer;
     z-index: 2;
   }
 
   .line {
     width: 25px;
-    height: 2px;
+    height: 2.5px;
     background: #000;
-    margin: 5px;
+    margin: 6px;
+    transition: all 0.3s ease-in-out;
   }
-  
+
+  .line.one {
+    width: 20px;
+  }
+/* 
+  .line.two {
+    transform: rotate(-45deg);
+  } */
+
+  .hamburger.open1 {
+    position: fixed;
+    right: 10%;
+  }
+
   .nav-links {
-    position: fixed;  
+    position: fixed;
     background: #2b70dc;
     /* background-image: url('./assets/hamburger_menu.jpg'); */
-    background-image:
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(43, 112, 220, 1)),
-      url('./assets/hamburger_menu1.jpg');
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.52),
+        rgba(43, 112, 220, 1)
+      ),
+      url("./assets/hamburger_menu1.jpg");
     background-size: cover;
     /* opacity: 0.3; */
     right: 0px;
@@ -252,14 +269,15 @@ nav a.router-link-exact-active {
   }
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #000;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 ::selection {
   color: #000;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* ScrollBar styles */

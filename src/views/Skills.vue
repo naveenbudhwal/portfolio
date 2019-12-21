@@ -5,18 +5,18 @@
       <!-- <hr /> -->
     </div>
     <div class="container page">
-      <card  
-      v-for="skill in skills"
-      :key="skill.id"
-      :Heading="skill.title"
-      :skillBody="skill.body"
-      :Picture="skill.picture"
+      <card
+        v-for="skill in skills"
+        :key="skill.id"
+        :Heading="skill.title"
+        :skillBody="skill.body"
+        :Picture="skill.picture"
       ></card>
     </div>
 
     <div class="social-media-bar">
       <a href="mailto:naveenbudhwal@gmail.com" target="_blank" rel="noopener">
-          <i class="far fa-envelope"></i>
+        <i class="far fa-envelope"></i>
       </a>
       <a href="https://www.instagram.com/naveenbudhwal" target="_blank" rel="noopener">
         <i class="fab fa-instagram"></i>
@@ -32,7 +32,6 @@
       </a>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -44,26 +43,50 @@ export default {
   data() {
     return {
       skills: [
-      { id: 1, title: 'WEB DEVELOPMENT', body: ["Vue JS", "Node JS", "MongoDB", "Express JS"], picture: require('@/assets/web_dev.png')},
-      { id: 2, title: 'DESIGNING', body: ["Abobe Illustrator", "Adobe Photoshop", "Adobe Premiere Pro", "Adobe Lightroom"], picture: require('@/assets/design.png')},
-      { id: 3, title: 'MUSIC PRODUCTION', body: ["FL Studio"], picture: require('@/assets/music_prod.png')},
-      {id: 4, title: 'PROGRAMMING', body: ['C / C++', 'Python'], picture: require('@/assets/programming.png')}
-    ]
+        {
+          id: 1,
+          title: "WEB DEVELOPMENT",
+          body: ["Vue JS", "Node JS", "MongoDB", "Express JS"],
+          picture: require("@/assets/web_dev.png")
+        },
+        {
+          id: 2,
+          title: "DESIGNING",
+          body: [
+            "Abobe Illustrator",
+            "Adobe Photoshop",
+            "Adobe Premiere Pro",
+            "Adobe Lightroom"
+          ],
+          picture: require("@/assets/design.png")
+        },
+        {
+          id: 3,
+          title: "MUSIC PRODUCTION",
+          body: ["FL Studio"],
+          picture: require("@/assets/music_prod.png")
+        },
+        {
+          id: 4,
+          title: "PROGRAMMING",
+          body: ["C / C++", "Python"],
+          picture: require("@/assets/programming.png")
+        }
+      ]
     };
   }
 };
 </script>
 
 <style scoped>
-
 .container {
   display: flex;
   width: 80%;
-  margin: auto;  
+  margin: auto;
 }
 
 .header {
-  background: rgba(0,123,255,.5);
+  background: rgba(0, 123, 255, 0.5);
   margin-top: -140px;
 }
 
@@ -71,7 +94,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-size: 3em;
   font-weight: 600;
-  color: #F6F8FF;
+  color: #f6f8ff;
   /* margin-left: 20%; */
   text-align: center;
   padding-top: 10%;
@@ -83,7 +106,8 @@ export default {
   background: #000;
 } */
 
-.container, .page {
+.container,
+.page {
   margin-top: -70px;
 }
 
@@ -108,7 +132,7 @@ i {
 .social-media-bar a i {
   /* padding: 16px; */
   padding: 10px;
-  border: 2px solid #AED6FF;
+  border: 2px solid #aed6ff;
   border-radius: 100%;
   font-size: 22px;
   /* width: 48px; */
@@ -118,8 +142,8 @@ i {
 
 .social-media-bar a i:hover {
   color: #fff;
-  background: #2b70dc;  
-  border: 2px solid #AED6FF;
+  background: #2b70dc;
+  border: 2px solid #aed6ff;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -131,16 +155,7 @@ i {
     margin-top: -250px;
   }
   .heading {
-    padding-top: 30%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .header {
-    margin-top: -300px
-  }
-  .heading {
-    padding-top: 70%;
+    padding-top: 25%;
   }
 }
 
@@ -151,6 +166,31 @@ i {
   .social-media-bar {
     margin-bottom: 20px;
   }
+  .heading {
+    padding-top: 30%;
+    padding-bottom: 15%;
+  }
 }
 
+@media only screen and (max-width: 576px) {
+  .header {
+    margin-top: -300px;
+  }
+  .heading {
+    padding-top: 80% !important;
+    padding-bottom: 30% !important;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .heading {
+    padding-top: 100% !important;
+  }
+  .social-media-bar a {
+    margin: 0 5px;
+  }
+  .social-media-bar a i {
+    font-size: 18px;
+  }
+}
 </style>
