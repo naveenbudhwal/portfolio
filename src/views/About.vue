@@ -194,7 +194,6 @@ export default {
   color: #535353;
   font-weight: 500;
   font-size: 1.2em;
-  /* padding-top: 30px; */
 }
 
 .color {
@@ -263,7 +262,6 @@ hr {
 }
 
 .music {
-  /* background: rgba(0,0,0,0.5); */
   background: #e6f4f1;
   margin: 10% 10%;
   padding: 5% 10%;
@@ -286,7 +284,6 @@ hr {
     0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   padding: 10px 20px;
   border-radius: 24px;
-
   transition: all 0.2s ease-in-out;
 }
 
@@ -301,14 +298,11 @@ hr {
 
 .music a:hover {
   background: #248c88;
-  /* font-size: 1.2em; */
 }
 
 .footer {
-  /* display: flex; */
   width: 100%;
   margin: 0;
-  /* padding: 2% 15%; */
   background: #191a1d;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -325,7 +319,6 @@ hr {
 
 .footer a {
   text-decoration: none;
-  /* margin: 0.5em 0; */
 }
 
 .footer .links a i:hover {
@@ -355,8 +348,6 @@ hr {
 }
 
 .logo1 {
-  /* flex: 1;
-  margin: auto; */
   width: fit-content;
   margin: 0 auto;
   padding: 10px 0;
