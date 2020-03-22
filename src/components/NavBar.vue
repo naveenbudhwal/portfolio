@@ -37,9 +37,9 @@
   const navIcon = document.querySelector('#nav-icon1');
   const links = document.querySelectorAll(".nav-links li");
   navIcon.addEventListener('click', function() {
+    navLinks.classList.toggle("open");
     navIcon.classList.toggle('open2');
     navIcon.classList.toggle('fix');
-    navLinks.classList.toggle("open"); 
     links.forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("open");
@@ -205,23 +205,17 @@ nav a.router-link-exact-active {
   .nav-links {
     position: fixed;
     background: #2b70dc;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.52),
-        rgba(43, 112, 220, 1)
-      ),
-      url("../assets/hamburger_menu1.jpg");
-    background-size: cover;
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(43, 112, 220, 1)); */
+    background: #2b70dc;
+    transform: translateX(100vh);
     right: 0px;
     height: 100vh;
-    width: 100%;
+    width: 60%;
     margin: 0;
     bottom: 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    clip-path: circle(100px at 90% -18%);
-    -webkit-clip-path: circle(100px at 90% -18%);
     transition: all 0.8s ease-in-out;
     pointer-events: none;
     z-index: 2;
@@ -237,9 +231,19 @@ nav a.router-link-exact-active {
   }
 
   nav .nav-links a.router-link-exact-active {
-    color: #434655;
-    border-bottom: 3px solid black;
-    border-color: #434655;
+    color: #fff;
+    position: relative;
+  }
+
+  nav .nav-links a.router-link-exact-active::before {
+    content: ''; 
+    position: absolute;
+    width: 3.2em;
+    height: 0.5em;
+    background: #96C0FF;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
   }
 
   .nav-links a:hover {
@@ -248,8 +252,7 @@ nav a.router-link-exact-active {
   }
 
   .nav-links.open {
-    clip-path: circle(1392px at 90% -18%);
-    -webkit-clip-path: circle(1392px at 90% -18%);
+    transform: translateX(0);
     pointer-events: all;
   }
 }
