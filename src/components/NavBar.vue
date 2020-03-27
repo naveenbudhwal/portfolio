@@ -6,7 +6,7 @@
           <img class="logo" src="../../public/Logo01.png" alt="Logo" />
         </router-link>
       </div>
-      <ul class="nav-links">
+      <ul class="nav-links">  
         <li class="nav-item">
           <router-link to="/">Home</router-link>
         </li>
@@ -34,18 +34,17 @@
 <script>
   window.addEventListener("load", function() {
   const navLinks = document.querySelector(".nav-links");
-  const navIcon = document.querySelector('#nav-icon1');
+  const navIcon = document.querySelector("#nav-icon1");
   const links = document.querySelectorAll(".nav-links li");
-  navIcon.addEventListener('click', function() {
+  navIcon.addEventListener("click", function() {
     navLinks.classList.toggle("open");
-    navIcon.classList.toggle('open2');
-    navIcon.classList.toggle('fix');
+    navIcon.classList.toggle("open2");
+    navIcon.classList.toggle("fix");
     links.forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("open");
-        // hamburger.classList.remove("open1");
-        navIcon.classList.remove('open2');
-        navIcon.classList.remove('fix');
+        navIcon.classList.remove("open2");
+        navIcon.classList.remove("fix");
       });
     });  
   })
