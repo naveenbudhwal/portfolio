@@ -237,11 +237,11 @@ nav a.router-link-exact-active {
   nav .nav-links a.router-link-exact-active::before {
     content: ''; 
     position: absolute;
-    width: 3.2em;
+    width: 2.8em;
     height: 0.5em;
-    background: #96C0FF;
+    background: rgb(41, 41, 41);
     bottom: 0;
-    right: 0;
+    left: 0;
     z-index: -1;
   }
 
