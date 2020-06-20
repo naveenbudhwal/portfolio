@@ -1,10 +1,7 @@
 <template>
-  <div class="root">
-    <div class="header">
-      <div class="heading">Skills</div>
-      <!-- <hr /> -->
-    </div>
-    <div class="container page">
+  <div class="skills-page">
+    <div class="heading">Skills</div>
+    <div class="container">
       <card
         v-for="skill in skills"
         :key="skill.id"
@@ -12,24 +9,6 @@
         :skillBody="skill.body"
         :Picture="skill.picture"
       ></card>
-    </div>
-
-    <div class="social-media-bar">
-      <a href="mailto:naveenbudhwal@gmail.com" target="_blank" rel="noopener">
-        <i class="far fa-envelope"></i>
-      </a>
-      <a href="https://www.instagram.com/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://www.github.com/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.twitter.com/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
     </div>
   </div>
 </template>
@@ -79,118 +58,45 @@ export default {
 </script>
 
 <style scoped>
+
+.skills-page {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   display: flex;
   width: 80%;
-  margin: auto;
-}
-
-.header {
-  background: rgba(0, 123, 255, 0.5);
-  margin-top: -140px;
 }
 
 .heading {
-  font-family: "Montserrat", sans-serif;
   font-size: 3em;
   font-weight: 600;
-  color: #f6f8ff;
-  /* margin-left: 20%; */
+  color: #333;
   text-align: center;
-  padding-top: 10%;
-  padding-bottom: 6rem;
-}
-
-/* hr {
-  width: 60%;
-  background: #000;
-} */
-
-.container,
-.page {
-  margin-top: -70px;
+  margin: 1em 0;
 }
 
 i {
   color: #2b70dc;
 }
 
-.social-media-bar {
-  position: relative;
-  height: 50px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.social-media-bar a {
-  font-size: 20px;
-  text-align: center;
-  margin: 0 20px;
-}
-
-.social-media-bar a i {
-  /* padding: 16px; */
-  padding: 10px;
-  border: 2px solid #aed6ff;
-  border-radius: 100%;
-  font-size: 22px;
-  /* width: 48px; */
-  /* height: 48px; */
-  transition: all 0.3s ease;
-}
-
-.social-media-bar a i:hover {
-  color: #fff;
-  background: #2b70dc;
-  border: 2px solid #aed6ff;
-}
-
 @media only screen and (max-width: 1200px) {
+  .skills-page {
+    height: 100%;
+  }
   .container {
     flex-direction: column;
     align-items: center;
-  }
-  .header {
-    margin-top: -250px;
-  }
-  .heading {
-    padding-top: 25%;
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .social-media-bar a {
-    margin: 0 10px;
-  }
-  .social-media-bar {
-    margin-bottom: 20px;
-  }
-  .heading {
-    padding-top: 30%;
-    padding-bottom: 15%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .header {
-    margin-top: -300px;
-  }
-  .heading {
-    padding-top: 80% !important;
-    padding-bottom: 30% !important;
-  }
-}
-
-@media only screen and (max-width: 370px) {
-  .heading {
-    padding-top: 100% !important;
-  }
-  .social-media-bar a {
-    margin: 0 5px;
-  }
-  .social-media-bar a i {
-    font-size: 18px;
+  .container {
+    width: 80%;
   }
 }
 </style>

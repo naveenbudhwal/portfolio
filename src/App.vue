@@ -42,7 +42,8 @@ export default {
 /*** ***/
 
 #app {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  /* background: #051923; */
 }
 
 body {
@@ -56,7 +57,6 @@ ul {
 }
 
 ::-moz-selection {
-  /* Code for Firefox */
   color: #000;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -68,23 +68,23 @@ ul {
 
 /* ScrollBar styles */
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 8px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: #e2e2e2;
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 20px;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+} */
 </style>

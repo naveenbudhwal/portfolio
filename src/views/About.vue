@@ -160,7 +160,6 @@ export default {
 
 <style scoped>
 .root2 {
-  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
 }
 
@@ -172,7 +171,6 @@ export default {
   display: flex;
   padding: 4% 0;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
   margin-top: 5%;
 }
 
@@ -305,7 +303,6 @@ hr {
   margin: 0;
   background: #191a1d;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
 }
 
 .qoute {

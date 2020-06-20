@@ -15,7 +15,7 @@
           <hr class="material-hr" />
           <div class="sub-intro">
             <p>Web Developer</p>
-            <p>Coder</p>
+            <!-- <p>Tech Enthusiast</p> -->
           </div>
         </div>
         <div class="second-half">
@@ -25,34 +25,28 @@
         </div>
       </div>
     </div>
-
-    <div class="social-media-bar">
-      <a href="mailto:naveenbudhwal@gmail.com" target="_blank" rel="noopener">
-        <i class="far fa-envelope"></i>
-      </a>
-      <a href="https://www.instagram.com/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://www.github.com/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.twitter.com/naveenbudhwal" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
+    <SocialNav class="bottom" />
   </div>
 </template>
 
 <script>
+
+import SocialNav from '@/components/SocialNav.vue';
+
 export default {
-  name: "home"
+  name: "home",
+  components: {
+    SocialNav
+  }
 };
 </script>
 
 <style scoped>
+
+.root {
+  height: 85vh;
+}
+
 .main {
   display: flex;
   justify-content: space-around;
@@ -68,9 +62,8 @@ export default {
 
 .intro {
   text-align: start;
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #434655;
   padding-top: 5%;
   padding-left: 20%;
@@ -108,8 +101,7 @@ export default {
 
 .sub-intro {
   text-align: start;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   color: #2b70dc;
   padding-left: 20%;
@@ -130,34 +122,7 @@ i {
   color: #2b70dc;
 }
 
-.social-media-bar {
-  position: relative;
-  height: 50px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.social-media-bar a {
-  text-align: center;
-  margin: 0 20px;
-}
-
-.social-media-bar a i {
-  padding: 10px;
-  border: 2px solid #aed6ff;
-  border-radius: 100%;
-  font-size: 22px;
-  transition: all 0.3s ease;
-}
-
-.social-media-bar a i:hover {
-  color: #fff;
-  background: #2b70dc;
-  border: 2px solid #aed6ff;
-}
-
-::-moz-selection {
-  /* Code for Firefox */
+/* ::-moz-selection {
   color: #fff;
   background: #000;
 }
@@ -165,7 +130,7 @@ i {
 ::selection {
   color: #fff;
   background: #000;
-}
+} */
 
 .color {
   color: #2b70dc;
@@ -177,6 +142,13 @@ i {
 
 .bold {
   font-weight: 600;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 1200px) {

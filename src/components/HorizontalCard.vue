@@ -27,7 +27,6 @@ export default {
   /* height: 150px; */
   display: flex;
   background: #fff;
-  font-family: "Montserrat", sans-serif;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   padding: 10px;
   border-radius: 15px;
@@ -56,7 +55,7 @@ export default {
   margin-bottom: 7px;
   color: #2b70dc;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.3em;
   letter-spacing: 1.2px;
 }

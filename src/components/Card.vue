@@ -7,7 +7,13 @@
     <hr class="material-hr">
     <div class="body">
       <ul>
-        <li class="skills" v-for="skill in skillBody">{{skill}}</li>
+        <li 
+          class="skills" 
+          v-for="(skill,$skillIndex) in skillBody" 
+          :key="$skillIndex"
+        >
+          {{skill}}
+        </li>
       </ul>
     </div>
   </div>
@@ -26,17 +32,20 @@ export default {
 
 <style scoped>
 .root {
-  width: 50%;
-  font-family: "Montserrat", sans-serif;
-  box-shadow: 
-    0 20px 30px  rgba(0, 0, 0, 0.1);
-    /* 0 5px 10px rgba(0, 0, 0, 0.1); */
-  /* border: 0.5px solid #dadada; */
+  width: 60%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  /* border: 0.5px solid #f1f1f1; */
   border-radius: 17px;
-  padding: 10px;
+  padding: 1em;
   /* box-shadow: 2px 2px 5px #dadada; */
   margin: 20px;
   background: #fff;
+  transition: all 300ms cubic-bezier(.33,0,.2,1);
+}
+
+.root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
 }
 
 .picture {
@@ -52,17 +61,19 @@ export default {
 }
 
 .header {
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   color: #2b70dc;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   font-size: 1.1em;
   margin: 10px 0;
 }
 
 .skills {
-  font-weight: 500;
-  margin: 5px 0;
+  font-weight: 400;
+  margin: 0.5em 0;
+  color: #333;
+  font-size: 1rem;
 }
 
 .body {
@@ -87,6 +98,7 @@ li {
   width: 50%;
   border: none;
   border-radius: 10px;
+  margin-bottom: 1.2em;
 }
 
 @media only screen and (max-width: 768px) {

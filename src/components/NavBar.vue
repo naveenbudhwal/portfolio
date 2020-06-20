@@ -138,10 +138,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1.2em;
-  margin-bottom: 30px;
   height: 15vh;
 }
 
@@ -165,11 +163,13 @@ export default {
 
 .nav-links a {
   text-decoration: none;
-  color: rgb(73, 80, 87);
+  color: #939393;
+  letter-spacing: 0.04em;
+  transition: all 140ms cubic-bezier(.55,.06,.68,.19);
 }
 
 .nav-links a:hover {
-  color: #2b70dc;
+  color: #000;
 }
 
 .nav-links li {
@@ -177,7 +177,7 @@ export default {
 }
 
 nav a.router-link-exact-active {
-  color: #2b70dc;
+  color: #000;
 }
 
 @media only screen and (max-width: 1200px) {
