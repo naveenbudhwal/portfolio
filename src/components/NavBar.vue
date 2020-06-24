@@ -22,7 +22,14 @@
       </ul>
 
       <div @click="switchToDark" class="dark-mode-btn">
-        <button>Dark Mode</button>
+        <span><img src="../assets/light.svg" alt=""></span>
+        <label class="switch">
+          <input type="checkbox">
+          <div>
+            <span></span>
+          </div>
+        </label>
+        <span><img src="../assets/dark.svg" alt=""></span>
       </div>
       
       <div id="nav-icon1">
@@ -65,6 +72,82 @@ export default {
 </script>
 
 <style scoped>
+
+.switch {
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch input + div {
+  position: relative;
+}
+
+.switch input + div:before,
+.switch input + div:after {
+  --s: 1;
+  content: '';
+  position: absolute;
+  height: 4px;
+  top: 10px;
+  width: 24px;
+  background: #505162;
+  transform: scaleX(var(--s));
+  transition: transform .3s ease;
+}
+
+.switch input + div:before {
+  --s: 0;
+  left: 0;
+  transform-origin: 0 50%;
+  border-radius: 2px 0 0 2px;
+}
+.switch input + div:after {
+  left: 28px;
+  transform-origin: 100% 50%;
+  border-radius: 0 2px 2px 0;
+}
+
+.switch input + div span {
+  padding-left: 56px;
+  line-height: 24px;
+  color: #9EA0BE;
+}
+
+.switch input + div span:before {
+  --x: 0;
+  --b: #9EA0BE;
+  --s: 4px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 var(--s) var(--b); 
+  transform: translateX(var(--x));
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.switch input + div span:not(:empty) {
+  padding-left: 64px;
+}
+
+input:checked + div:before {
+  --s: 1;
+}
+input:checked + div:after {
+  --s: 0;
+}
+
+input:checked + div span:before {
+  --x: 28px;
+  --s: 12px;
+  --b: #F7F8FF;
+}
 
 #nav-icon1 {
   display: none;
@@ -167,6 +250,17 @@ export default {
   justify-content: space-around;
   align-items: center;
   /* width: 30%; */
+}
+
+.dark-mode-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode-btn span img {
+  width: 20px;
+  height: auto;
 }
 
 .nav-item {
