@@ -20,6 +20,10 @@
           <router-link to="/about">About</router-link>
         </li>
       </ul>
+
+      <div @click="switchToDark" class="dark-mode-btn">
+        <button>Dark Mode</button>
+      </div>
       
       <div id="nav-icon1">
         <span></span>
@@ -51,7 +55,12 @@
 });
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  methods: {
+    switchToDark () {
+      this.$store.commit('TOGGLE_DARK_MODE')
+    }
+  }
 }
 </script>
 
@@ -137,14 +146,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0 0.8em;
   font-weight: 600;
   font-size: 1.2em;
   height: 15vh;
 }
 
 .logo {
-  margin-left: 15px;
   width: 65px;
   height: 65px;
 }
@@ -157,23 +165,24 @@ export default {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  margin-right: 30px;
-  width: 30%;
+  align-items: center;
+  /* width: 30%; */
 }
 
-.nav-links a {
+.nav-item {
+  margin: 0 1em;
+  list-style: none;
+}
+
+.nav-item a {
   text-decoration: none;
   color: #939393;
   letter-spacing: 0.04em;
   transition: all 140ms cubic-bezier(.55,.06,.68,.19);
 }
 
-.nav-links a:hover {
+.nav-item a:hover {
   color: #000;
-}
-
-.nav-links li {
-  list-style: none;
 }
 
 nav a.router-link-exact-active {
@@ -204,8 +213,6 @@ nav a.router-link-exact-active {
   .nav-links {
     position: fixed;
     background: #2b70dc;
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(43, 112, 220, 1)); */
-    background: #2b70dc;
     transform: translateX(100vh);
     right: 0px;
     height: 100vh;
@@ -220,11 +227,11 @@ nav a.router-link-exact-active {
     z-index: 2;
   }
 
-  .nav-links li {
-    padding: 30px 0;
+  .nav-item {
+    padding: 1.5em 0;
   }
 
-  .nav-links a {
+  .nav-item a {
     color: #fff;
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -234,7 +241,7 @@ nav a.router-link-exact-active {
     position: relative;
   }
 
-  nav .nav-links a.router-link-exact-active::before {
+  nav .nav-item a.router-link-exact-active::before {
     content: ''; 
     position: absolute;
     width: 2.8em;
@@ -245,7 +252,7 @@ nav a.router-link-exact-active {
     z-index: -1;
   }
 
-  .nav-links a:hover {
+  .nav-item a:hover {
     color: #434655;
     font-size: 1.2em;
   }
